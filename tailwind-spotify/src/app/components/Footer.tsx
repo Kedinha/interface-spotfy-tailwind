@@ -1,0 +1,49 @@
+import { Shuffle, SkipBack, Play, SkipForward, Repeat, Mic2, LayoutList, MonitorSmartphone, Volume2, Maximize2 } from "lucide-react";
+import Image from "next/image";
+
+export function Footer() {
+  return(
+    <footer className="bg-zinc-800 border-t border-zinc-700 px-4 py-2 flex items-center justify-between">
+        <div className='flex items-center gap-3'>
+          <Image src="/hotHitsUSA.jpg" width={56} height={56} alt="Capa do Album" />
+          <div className="flex flex-col">
+            <strong className='font-normal text-sm'>Rope</strong>
+            <span className='text-xs text-zinc-400'>Foo Fighters</span>
+          </div>
+        </div>
+
+        <div className='flex flex-col items-center'>
+          <div className='flex items-center gap-6'>
+            <Shuffle size={20} className='text-green-500 '/>
+            <SkipBack size={20} className=' text-zinc-200'/>
+            <button className='w-10 h-10 flex items-center justify-center pl-1 rounded-full bg-white hover:bg-green-500 text-black/70 hover:text-white'>
+              <Play />
+            </button>
+            <SkipForward  size={20}className='text-zinc-200'/>
+            <Repeat size={20} className=' text-zinc-200'/>
+            <div className='flex items-center gap-2'>
+            <span className='text-xs text-zinc-400'>0:31</span>
+            <div className='h-1 rounded-full w-96 bg-zinc-600'>
+              <div className='bg-zinc-200 w-40 h-1 rounded-full'></div>
+            </div>
+            <span className='text-xs text-zinc-400'>2:14</span>
+            </div>
+          </div>
+        </div>
+
+        <div className='flex items-center gap-4'>
+          <Mic2 size={20}/>
+          <LayoutList size={20}/>
+          <MonitorSmartphone size={20}/>
+        
+        <div className='flex items-center gap-2'>
+          <Volume2 size={20}/>
+          <div className='h-1 rounded-full w-24 bg-zinc-600'>
+              <div className='bg-zinc-200 w-10 h-1 rounded-full'></div>
+            </div>
+        </div>
+        <Maximize2 size={20}/>
+        </div>
+      </footer>
+  )
+}
